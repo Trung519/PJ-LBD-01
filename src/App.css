@@ -1,0 +1,63 @@
+.bg-body-tertiary
+{
+  height: 70px;
+  margin: 0;
+  padding-left: 0;
+
+}
+#img_container {
+  display: flex;
+  justify-content: center;
+  
+}
+#img_container img
+{
+  max-width: 2.5%;
+  position: absolute;
+  left: 10px;
+  bottom: 17px;
+}
+
+#img_logoHsv
+{
+  margin-left: 100px;
+}
+#img_logoH
+{
+  margin-left: 50px;
+}
+
+.me-auto
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#navtab
+{
+  font-weight: bold;
+}
+
+#buttonlogin
+{
+  color: blue;
+  border: none;
+  border-radius: 5px;
+  width: 5%;
+  height: auto;
+  text-align: center;
+  font-size: larger;
+}
+#backgroundimage
+{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100vh;
+}
+#basic-navbar-nav
+{
+  display: flex;
+  justify-content: space-between;
+}
+
