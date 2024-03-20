@@ -54,7 +54,9 @@ function Func_Login() {
                         localStorage.setItem('user', JSON.stringify([{ userid: e.target.userid.value, pw: e.target.pw.value }]))
                         setdata([localStorage.getItem('user')]);
                     }
+                    
                     setaction("Login");
+                    window.location.reload();
                 }
             }
         }
@@ -81,7 +83,7 @@ function Func_Login() {
                     </div>
                     <div className='submit-container'>
                         {action === "Login" ? <button className='submit' >Login</button> : <div></div>}
-                        <button className='submit'>Sign up</button>
+                        <button className='submit' onClick={()=>{setaction("Sign up")}}>Sign up</button>
                     </div>
                 </fieldset>
             </form>
