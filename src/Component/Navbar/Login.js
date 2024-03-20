@@ -4,70 +4,6 @@ import './Login.css';
 import Home from './Home';
 import bg_lg from '../assets/bg-login.jpg';
 import { json, useNavigate } from 'react-router-dom';
-// function Func_Login() {
-//     const [action, setaction] = useState('Login');
-//     const [userId, setuserId] = useState('');
-//     const [password, setpassword] = useState('')
-//     const handleinput = () => {
-//         if (!userId || !password) {
-//             alert("Please check again!")
-//         }
-//     }
-//     const [data, setdata] = useState([]);
-//     useEffect(() => {
-//         setdata(JSON.parse(localStorage.getItem('user')));
-//     }, [])
-//     const nav = useNavigate();
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-//         console.log("name");
-//         if (e.target.userid.value && e.target.pw.value) {
-//             if (!localStorage.getItem('user')) {
-//                 if (action === "Login") {
-//                     alert("Account does not exist! Please Sign up");
-//                     setaction("Sign up");
-//                 }
-//                 else
-//                 {
-//                     localStorage.setItem('user',JSON.stringify([{userid: e.target.userid.value, pw:e.target.pw.value}]))
-//                     return true; 
-//                 }
-//             }
-//             else {
-//                 for (let i of data) {
-//                     if (i.userid === e.target.userid.value) {
-//                         if (action !== "Login")
-//                         {
-//                             alert("User id existed! Login Please");
-//                             setaction("Login");
-//                         }
-//                         else {
-//                             if (i.pw == e.target.pw.value)
-//                                 nav("/Home");
-//                             else alert("Password does not match!");
-//                         }
-//                     }
-//                     else {
-//                         if (action === "Login") {
-//                             alert("Account does not exist! Please Sign up");
-//                             if (action === "Login")
-//                                 setaction("Sign up");
-//                         }
-//                         else
-//                         {
-//                             alert ("Sign up, Successfully! Please Login");
-//                             setaction("Login");
-//                         }
-//                     }
-
-//                 }
-//             }
-//             if (action !== "Login" && localStorage.getItem('user')) {
-//                 localStorage.setItem('user', JSON.stringify([...data, { userid: e.target.userid.value, pw: e.target.pw.value }]))
-//                 nav("/Home");
-//             }
-//         }
-//     }
 function Func_Login() {
     const [action, setaction] = useState('Login');
     const [userId, setuserId] = useState('');
@@ -97,7 +33,7 @@ function Func_Login() {
                         }
                         else {
                             if (i.pw == e.target.pw.value)
-                                console.log("babeboy");
+                                nav("/Home")
                             else alert("Password does not match!");
                         }
                         break;

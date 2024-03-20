@@ -1,11 +1,41 @@
-import React, { Component } from 'react'
+import './Add_Event.css';
+import { useState } from 'react';
+import Table from './component_addevent/Table.jsx';
+import UserInput from './component_addevent/UserInput.jsx';
+import EventName from './component_addevent/EventName.jsx'; 
 
-export default class Add_Event extends Component {
-  render() {
-    return (
-      <div>
-        <h1>About</h1>
-      </div>
-    )
+function Add_Event() {
+
+  const [userInput, setUserInput] = useState({
+    productName: '',
+    productQuantity: 0,
+    productPrice: 0
+  });
+  
+  const [tableData, setTableData] = useState([]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const dataObj = (data) => [...data, userInput];
+    setTableData(dataObj);
+    const isEmpty = { productName: '', productQuantity: 0, productPrice: 0 };
+    setUserInput(isEmpty);
   }
+
+  const handleChange = (event) => {
+    const value = (res) => ({
+      ...res,
+      [event.target.name]: event.target.value,});
+      setUserInput(value);
+  };
+
+  return (
+    <div className="App">
+      <EventName />
+      <UserInput userInput={userInput} onChange={handleChange} onSubmit={handleSubmit} />
+      <Table tableData={tableData} />
+    </div>
+  );
 }
+
+export default Add_Event;

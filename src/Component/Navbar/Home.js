@@ -14,7 +14,6 @@ function Func_Home() {
       </div>
       <div>
         <h1 id='Notify'>Thông báo chung</h1>
-        <button onClick={()=>nav(-1)}>LOGOUT</button>
       </div>
     </>
   )
