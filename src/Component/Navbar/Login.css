@@ -1,0 +1,80 @@
+#header
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  gap: 9px;
+  width: 100%;
+  font-size: 30px;
+  cursor: pointer;
+}
+#loginjs 
+{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 70px;
+  background:#87b0e6;
+  padding-bottom: 30px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow:#282c34;
+}
+
+#formlogin input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 355px;
+  height: 50px;
+  background: #ffffff; /* Màu nền sáng cho input */
+  border-radius: 6px;
+  color: #282c34; /* Màu chữ tối */
+  font-size: 19px;
+  margin-top: 30px;
+  gap: 25px;
+  margin-left: 25px;
+  margin-right: 40px;
+  border: none; 
+  box-shadow: inset 0 2px 4px 0 rgba(37, 15, 203, 0.779); /* Thêm bóng đổ nhẹ */
+}
+.text
+{
+  color:#eaeaea;
+  font-size: 48px;
+  font-weight: 700;
+}
+.submit-container
+{
+  display: flex;
+  gap: 30px;
+  margin: 30px auto;
+  border: none;
+}
+
+.submit
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  background: #61dafb;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-right: 25px;
+  border: none;
+  box-shadow: inset 0 2px 4px 0 rgba(27, 77, 240, 0.779); /* Thêm bóng đổ nhẹ */
+}
+.submit:hover
+{
+  background-color: #f86408fb; 
+  color: white; 
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); 
+}
