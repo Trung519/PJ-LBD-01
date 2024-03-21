@@ -45,8 +45,9 @@ function Add_Event() {
     <div className='container-add-event'>
         <h1>{EventName.userInput}</h1>
         <EventName />
-        <Table tableData={tableData} onDeleteRow={handleDeleteRow} onEdit={handleEdit}/>
         <UserInput userInput={userInput} onChange={handleChange} onSubmit={handleSubmit} />
+        <Table tableData={tableData} onDeleteRow={handleDeleteRow} onEdit={handleEdit}/>
+        
       </div>
     </>
 

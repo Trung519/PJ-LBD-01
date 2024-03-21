@@ -32,10 +32,10 @@ export default function UserInput({ userInput, onChange, onSubmit }) {
                         value={userInput.productQuantity}
                         onChange={onChange} />
                 </p>
-            </div>
-            <div>
-                    <button className="btn" onClick={onSubmit}>Submit</button>
+                <div className="container-vertifyall">
+                    <button className="btn-sb-user-input" onClick={onSubmit}>Submit</button>
                 </div>
+            </div>
         </form>
     )
 }

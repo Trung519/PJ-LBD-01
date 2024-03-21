@@ -11,7 +11,7 @@ import axios from "axios";
 
 export default function Table({ tableData, onDeleteRow, onEdit }) {
     const [allIsVerified, setAllIsVerified] = useState(false);
-    const [stateComment, setStateComment] = useState(false);
+    const [comments, setcomments] = useState([]);
     const handleTrash = (index) => {
         onDeleteRow(index);
     };
@@ -23,21 +23,31 @@ export default function Table({ tableData, onDeleteRow, onEdit }) {
         setAllIsVerified(allIsVerified => !allIsVerified);
     }
 
+    const handleComment = (newComment, index) => {
+        const updatedComments = [...comments];
+        updatedComments[index] = newComment;
+        setcomments(updatedComments);
+    }
+    
+
     const row = tableData.map((data, index) => {
         return (
-            <tr key={index}>
+            <tr className="DataTable" key={index}>
                 <td>{index + 1}</td>
                 <td>{data.productName}</td>
                 <td>{data.productPrice}</td>
                 <td>{data.productQuantity}</td>
                 <td>{calculateMoney(data.productPrice, data.productQuantity)}</td>
-                <td></td>
+                <td>{comments[index]}</td>
                 <td><VerifyButton allVerified={allIsVerified} /></td>
                 <td id="latest-row">
                     <div className="icon-table">
                         <FontAwesomeIcon icon={faTrash} onClick={() => handleTrash(index)} />
                         <FontAwesomeIcon icon={faPenToSquare} onClick={() => { handleEdit_Content(index) }} />
-                        <CommentField />
+                        <CommentField
+                            onChangeComment={(newComment) => handleComment(newComment, index)}
+                            comment={comments[index]}
+                        />
                     </div>
                 </td>
             </tr>

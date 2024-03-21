@@ -1,6 +1,6 @@
 .input-group {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-around;
   gap: 1.5rem;
 }
 .Add-Event
@@ -29,10 +29,35 @@
   color: black;
   font-size: 1rem;
 }
+.DataTable
+{
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.btn-sb-user-input
+{
+  background-color: rgb(189, 126, 136);
+  max-width: min-content;
+  max-height: auto;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  max-height: 30px;
+  max-width: max-content;
+  font-size:larger;
+}
+.btn-sb-user-input:hover
+{
+  background-color: white;
+  color: black;
+}
 .container-vertifyall
 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 .btn{
   border: none;
@@ -45,6 +70,7 @@
   margin-top: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  align-items: center;
 }
 
 #result {
@@ -163,8 +189,8 @@
 }
 #btn-save:hover
 {
-  background-color: aqua;
-  color: rgb(255, 255, 255);
+  background-color: white;
+  color: black;
 }
 #cmt-text {
   color: #333;
