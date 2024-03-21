@@ -29,12 +29,23 @@ function Add_Event() {
     setUserInput(value);
   };
 
+  const handleDeleteRow = (index) => {
+    // Remove the element at the given index from tableData
+    const updatedData = [...tableData];
+    updatedData.splice(index, 1);
+    setTableData(updatedData);
+};
+
+  const handleEdit = (index) => {
+      setUserInput(tableData[index]);
+      handleDeleteRow(index);
+  }
   return (
     <>
     <div className='container-add-event'>
         <h1>{EventName.userInput}</h1>
         <EventName />
-        <Table tableData={tableData} />
+        <Table tableData={tableData} onDeleteRow={handleDeleteRow} onEdit={handleEdit}/>
         <UserInput userInput={userInput} onChange={handleChange} onSubmit={handleSubmit} />
       </div>
     </>
