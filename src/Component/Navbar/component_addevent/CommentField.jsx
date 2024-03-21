@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function CommentField({ handleClick}) {
     
@@ -20,9 +22,7 @@ export default function CommentField({ handleClick}) {
     return (
         <>
            {editableComment}
-        <button
-        id="cmt-btn" 
-        onClick={handleClick}>{isEditingComment ? "Save" : "Comment"}</button>
+        <FontAwesomeIcon icon={faComment} onClick={handleClick}/>
         </>
         
     )

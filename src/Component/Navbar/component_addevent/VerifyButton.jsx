@@ -1,3 +1,4 @@
+import { Button } from 'bootstrap';
 import {useState} from 'react';
 
 
@@ -14,8 +15,10 @@ export default function VerifyButton({allVerified}){
             <button id="active" onClick={handleVerify} type="submit">Verify</button>
         )
     }
-     return (
-        
-        <button id={(isVerified)? 'active' : 'inactive'} onClick={handleVerify} type="submit">Verify</button>
-    )
+     return (    
+            isVerified?
+            <button id='active' onClick={handleVerify}>OK</button>
+            :
+            <button id='inactive' onClick={handleVerify}>NOT OK</button>
+        )
 };  
