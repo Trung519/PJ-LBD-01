@@ -19,9 +19,7 @@ export default function CommentField({ handleClick}) {
     }
     return (
         <>
-        
            {editableComment}
-           <br/><br/>
         <button
         id="cmt-btn" 
         onClick={handleClick}>{isEditingComment ? "Save" : "Comment"}</button>

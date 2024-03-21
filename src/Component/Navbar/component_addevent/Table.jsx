@@ -3,18 +3,28 @@ import VerifyButton from "./VerifyButton";
 import CommentField from "./CommentField";
 import { useState } from 'react';
 import CommentButton from "./CommentButton";
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment } from '@fortawesome/free-solid-svg-icons';
+import axios from "axios";
 
-export default function Table({tableData}) {
-    
-    
+
+export default function Table({ tableData }) {
+
+
     const [allIsVerified, setAllIsVerified] = useState(false);
 
-    
+
 
     function handleVerifyAll() {
         setAllIsVerified(true);
     }
-
+    const [datas,setdatas]=useState(tableData);
+    const handleTrash = (index)=>
+    {
+        axios.delete()
+    }
 
     return (
         <>
@@ -27,9 +37,9 @@ export default function Table({tableData}) {
                     <th>Tổng tiền</th>
                     <th>Tình trạng</th>
                     <th>Ghi chú</th>
-                    <th>Chỉnh sửa</th>
+                    <th>Hoạt động khác</th>
                 </thead>
-                <tbody>
+                <tbody id="table">
                     {tableData.map((data, index) => {
                         return (
                             <tr key={index}>
@@ -38,14 +48,17 @@ export default function Table({tableData}) {
                                 <td>{data.productPrice}</td>
                                 <td>{data.productQuantity}</td>
                                 <td>{calculateMoney(data.productPrice, data.productQuantity)}</td>
-                                <td>{
-                                    <VerifyButton allVerified={allIsVerified} />}
-                                </td>
                                 <td>
-                                       {<CommentField  />} 
                                 </td>
                                 <td>
                                     
+                                </td>
+                                <td id="latest-row">
+                                    <div className="icon-table">
+                                        <FontAwesomeIcon icon={faTrash} onClick={()=>{handleTrash(index)}}/>
+                                        <FontAwesomeIcon icon={faPenToSquare} />
+                                        <FontAwesomeIcon icon={faComment} />
+                                    </div>
                                 </td>
                             </tr>
                         );

@@ -3,7 +3,14 @@
   justify-content: space-evenly;
   gap: 1.5rem;
 }
-
+.Add-Event
+{
+  margin-top: 50px;
+}
+.container-add-event
+{
+  padding: 30px 30px;
+}
 #user-input label {
   display: inline-block;
   margin-bottom: 0.25rem;
@@ -46,6 +53,7 @@
 #result th {
   border: 1px solid #ddd;
   padding: 8px;
+  width: 12.5%;
 }
 
 #result tr:nth-child(even) {
@@ -96,6 +104,12 @@
   font-weight: bold;
 }
 
+#active, #inactive
+{
+  width: fit-content;
+  height: fit-content;
+  font-size: small;
+}
 
 #event-name {
   color: darkviolet;
@@ -104,7 +118,7 @@
 }
 
 #event-input {
-  width: 50%;
+  width: fit-content;
   padding: 0.5rem;
   border: 2px solid mediumpurple;
   border-radius: 0.25rem;
@@ -112,18 +126,69 @@
   color: black;
   font-size: 1rem;
 }
-
-#cmt-btn{
-  border: none;
-  background-color:deepskyblue;
+#E-name
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 30px;
+}
+#E-Header
+{
+  text-align: center;
+}
+#btn-save
+{
+  width: 70px;
+  height: fit-content;
   color: white;
-  font-size: 1rem;
+  background-color: pink;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-right: 80px;
+}
+#btn-save:hover
+{
+  background-color: aqua;
+  color: rgb(255, 255, 255);
+}
+#cmt-text {
+  color: #333;
+}
+
+#cmt-btn {
+  border: none;
+  background-color:mediumspringgreen;
+  color: white;
+  font-size: 3px;
   cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
-#cmt-text{
-
- padding-bottom: 6rem;
+#cmt-btn:hover {
+  background-color: #45a049;
+}
+.icon-table
+{
+  color: #ff0026;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0px;
+  cursor: pointer;
+}
+#latest-row
+{
+  max-width: 20%;
+  justify-self: end;
+}
+#table
+{
+  height: fit-content;
 }
