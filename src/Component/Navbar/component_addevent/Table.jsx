@@ -2,18 +2,18 @@ import { calculateMoney } from "../util/calculator";
 import VerifyButton from "./VerifyButton";
 import CommentField from "./CommentField";
 import { useEffect, useState } from 'react';
-import CommentButton from "./CommentButton";
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment } from '@fortawesome/free-solid-svg-icons';
-import axios from "axios";
 
 export default function Table({ tableData, onDeleteRow, onEdit }) {
     const [allIsVerified, setAllIsVerified] = useState(false);
     const [comments, setcomments] = useState([]);
     const handleTrash = (index) => {
         onDeleteRow(index);
+        const updatecmt = [...comments];
+        updatecmt.splice(index,1);
+        setcomments(updatecmt);
     };
     const handleEdit_Content = (index) => {
         onEdit(index);
