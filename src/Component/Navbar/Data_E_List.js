@@ -1,4 +1,4 @@
-export const events = [
+export const events01 = [
     {
         name: 'Event 1',
         lead: 'John Doe',
@@ -17,7 +17,7 @@ export const events = [
         name: 'Event 3',
         lead: 'Michael Johnson',
         time: '2024-04-10 09:30',
-        budgetState: 'Approved',
+        budgetState: 'Funded',
         status: 'In Progress'
     },
     {
@@ -38,7 +38,7 @@ export const events = [
         name: 'Event 6',
         lead: 'Sophia Garcia',
         time: '2024-04-25 14:30',
-        budgetState: 'Approved',
+        budgetState: 'Funded',
         status: 'In Progress'
     },
     {
@@ -59,7 +59,7 @@ export const events = [
         name: 'Event 9',
         lead: 'Ethan Lopez',
         time: '2024-05-14 16:00',
-        budgetState: 'Approved',
+        budgetState: 'Funded',
         status: 'In Progress'
     },
     {
@@ -68,7 +68,8 @@ export const events = [
         time: '2024-05-20 12:30',
         budgetState: 'Funded',
         status: 'Scheduled'
-    },
+    }];
+export const events02 =[
     {
         name: 'Event 11',
         lead: 'Matthew Turner',
@@ -80,7 +81,7 @@ export const events = [
         name: 'Event 12',
         lead: 'Chloe Scott',
         time: '2024-06-01 10:30',
-        budgetState: 'Approved',
+        budgetState: 'Funded',
         status: 'In Progress'
     },
     {
@@ -101,7 +102,7 @@ export const events = [
         name: 'Event 15',
         lead: 'Liam Adams',
         time: '2024-06-19 15:20',
-        budgetState: 'Approved',
+        budgetState: 'Funded',
         status: 'In Progress'
     },
     {
@@ -122,7 +123,7 @@ export const events = [
         name: 'Event 18',
         lead: 'Amelia Nelson',
         time: '2024-07-07 10:45',
-        budgetState: 'Approved',
+        budgetState: 'Funded',
         status: 'In Progress'
     },
     {

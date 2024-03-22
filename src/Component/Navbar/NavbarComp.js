@@ -17,7 +17,7 @@ import '../../App.css'
 import Logo_HoiSv from '../assets/Img_HoiSv.png';
 import Logo_Doan from '../assets/logo_DoanTN.png';
 import Logo_HCMUT from '../assets/logo_HCMUT.png';
-import { events } from './Data_E_List';
+
 function Func_NavbarComp() {
   const [stateLogin, setStateLogin] = useState(true);
   useEffect(() => {
@@ -63,7 +63,7 @@ function Func_NavbarComp() {
         <Routes>
           <Route path="/Add_Event" element={<Add_Event />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/List_Event" element={<List_Event events={events} />} />
+          <Route path="/List_Event" element={<List_Event />} />
           <Route path="/Home" element={<Home />} />
         </Routes>
       </div>

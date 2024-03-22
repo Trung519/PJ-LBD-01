@@ -87,12 +87,9 @@
 }
 
 #result tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e9f0fa;
 }
 
-#result tr:hover {
-  background-color: #ddd;
-}
 
 #result tbody {
   font-family: 'Roboto Condensed', sans-serif;
@@ -232,5 +229,13 @@
 }
 #table
 {
-  height: fit-content;
+  height:min-content;
 }
+.editing-row {
+  background-color: yellow !important; 
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+

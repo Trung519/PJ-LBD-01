@@ -2,11 +2,12 @@ import { calculateMoney } from "../util/calculator";
 import VerifyButton from "./VerifyButton";
 import CommentField from "./CommentField";
 import { useEffect, useState } from 'react';
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Table({ tableData, onDeleteRow, onEdit }) {
+
+export default function Table({ tableData, onDeleteRow, onEdit, editingIndex }) {
     const [allIsVerified, setAllIsVerified] = useState(false);
     const [comments, setcomments] = useState([]);
     const handleTrash = (index) => {
@@ -14,6 +15,9 @@ export default function Table({ tableData, onDeleteRow, onEdit }) {
         const updatecmt = [...comments];
         updatecmt.splice(index,1);
         setcomments(updatecmt);
+        if (allIsVerified && tableData.length === 1) {
+            setAllIsVerified(false);
+        }
     };
     const handleEdit_Content = (index) => {
         onEdit(index);
@@ -28,18 +32,19 @@ export default function Table({ tableData, onDeleteRow, onEdit }) {
         updatedComments[index] = newComment;
         setcomments(updatedComments);
     }
-    
 
     const row = tableData.map((data, index) => {
         return (
-            <tr className="DataTable" key={index}>
-                <td>{index + 1}</td>
+            <tr className={index===editingIndex?'editing-row':'DataTable'} key={index}>
+                <td>{index + 1} </td>
                 <td>{data.productName}</td>
                 <td>{data.productPrice}</td>
                 <td>{data.productQuantity}</td>
                 <td>{calculateMoney(data.productPrice, data.productQuantity)}</td>
                 <td>{comments[index]}</td>
-                <td><VerifyButton allVerified={allIsVerified} /></td>
+                <td>
+                    <VerifyButton allVerified={allIsVerified}/>
+                    </td>
                 <td id="latest-row">
                     <div className="icon-table">
                         <FontAwesomeIcon icon={faTrash} onClick={() => handleTrash(index)} />
