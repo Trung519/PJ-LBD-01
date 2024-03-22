@@ -20,6 +20,8 @@ import Logo_HCMUT from '../assets/logo_HCMUT.png';
 
 function Func_NavbarComp() {
   const [stateLogin, setStateLogin] = useState(true);
+  const [username, setusername] = useState("")
+  const user = JSON.parse(localStorage.getItem('user'));
   useEffect(() => {
     if (localStorage.getItem('user')) {
       setStateLogin(false);
@@ -52,8 +54,15 @@ function Func_NavbarComp() {
                   <Nav.Link id='navtab' as={Link} to="/Add_Event">Thêm sự kiện</Nav.Link>
                   <Nav.Link id='navtab' as={Link} to="/List_Event">Danh sách sự kiện</Nav.Link>
                 </div>
-                {stateLogin ? (<Nav.Link title='button' id='buttonlogin' as={Link} to={"./Login"} onDoubleClick={() => { window.location.reload() }}>Login</Nav.Link>)
-                  : (<Nav.Link title='button' id='buttonlogin' onClick={handleLogout}>Logout</Nav.Link>)}
+                {stateLogin ? (
+                  <Nav.Link title='button' id='buttonlogin' as={Link} to={"./Login"} onDoubleClick={() => { window.location.reload() }}>Login</Nav.Link>
+                ) : (
+                  <>
+                    <NavDropdown id='navtab' title={user.map((data) => data.username)}>
+                      <NavDropdown.Item title='button' id='btn-logout' onClick={handleLogout}>Logout</NavDropdown.Item>
+                    </NavDropdown>
+                  </>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Container>

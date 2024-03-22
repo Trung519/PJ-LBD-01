@@ -27,7 +27,6 @@ export default function List_Event({  }) {
     <div className='tool-bar'>
       <label for='date-list'>Chọn tháng diễn ra: </label>
       <input id='date-list' type='month' onChange={handleInputChange}></input>
-      
     </div>
     <table id="List_Table">
       <thead>

@@ -47,14 +47,25 @@ function Func_Login() {
                 }
                 else {
                     alert("Sign up, Successfully! Please Login");
-                    
+
                     if (localStorage.getItem('user'))
-                        localStorage.setItem('user', JSON.stringify([...data, { userid: e.target.userid.value, pw: e.target.pw.value }]))
+                        localStorage.setItem('user', JSON.stringify([...data,
+                        {
+                            userid: e.target.userid.value,
+                            pw: e.target.pw.value,
+                            username: e.target.username.value,
+                            userphone: e.target.userphone.value
+                        }]))
                     else {
-                        localStorage.setItem('user', JSON.stringify([{ userid: e.target.userid.value, pw: e.target.pw.value }]))
+                        localStorage.setItem('user', JSON.stringify([{
+                            userid: e.target.userid.value,
+                            pw: e.target.pw.value,
+                            username: e.target.username.value,
+                            userphone: e.target.userphone.value
+                        }]))
                         setdata([localStorage.getItem('user')]);
                     }
-                    
+
                     setaction("Login");
                     window.location.reload();
                 }
@@ -69,8 +80,8 @@ function Func_Login() {
                         <h1 id='header' onClick={(event) => { event.preventDefault(); setaction("Sign up") }}><b>{action}</b></h1>
                     </div>
                     {action === "Sign up" ? <div>
-                        <input type='text' placeholder=' Enter Yourname'></input>
-                        <input type='number' placeholder=' Enter Your Phonecall'></input>
+                        <input type='text' name='username' placeholder=' Enter Yourname'></input>
+                        <input type='number' name='userphone' placeholder=' Enter Your Phonecall'></input>
                     </div> : <div></div>}
                     <div>
                         <input type='text' placeholder=' Enter UserID' name='userid' id='placeholder_user' onChange={(e) => { setuserId(e.target.value) }}></input>
@@ -83,7 +94,7 @@ function Func_Login() {
                     </div>
                     <div className='submit-container'>
                         {action === "Login" ? <button className='submit' >Login</button> : <div></div>}
-                        <button className='submit' onClick={()=>{setaction("Sign up")}}>Sign up</button>
+                        <button className='submit' onClick={() => { setaction("Sign up") }}>Sign up</button>
                     </div>
                 </fieldset>
             </form>
