@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './List_Event.css';
 import { events01,events02 } from './Data_E_List';
 export default function List_Event({  }) { 
@@ -10,16 +10,15 @@ export default function List_Event({  }) {
         return <div className="budget-default">Unknown</div>;
     }
   }
-  const [month, setMonth] = useState('');
+  const [month, setMonth] = useState(new Date().getMonth()+1);
   const [events, setEvents] = useState([]);
 
+  useEffect(()=>{
+    if (month===3) setEvents(events01);
+    else setEvents(events02);
+  },[month])
     const handleInputChange = (e) => {
-        setMonth(e.target.value);
-        if (month==="2024-03")
-        {
-          setEvents(events01);
-        }
-        else setEvents(events02);
+        setMonth(new Date(e.target.value).getMonth()+1);
     }
   return (
     <>

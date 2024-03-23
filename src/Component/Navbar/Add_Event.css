@@ -106,34 +106,46 @@
 }
 
 #active {
-  border: none;
   background-color:rgb(0, 17, 250);
   color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  
 }
-
-#inactive {
+#activeAll
+{
   border: none;
-  background-color:rgb(255, 0, 0);
+  background-color:rgb(0, 250, 121);
   color: white;
   font-size: 1rem;
   cursor: pointer;
   padding: 0.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  width: 100%;
+  height: fit-content;
+  font-size: small;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items:center;
+  border-radius: 4px;
+  position:relative;
 }
-
+#inactive {
+  background-color:rgb(255, 0, 0);
+  color: white;
+}
 #active, #inactive
 {
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   width: 100%;
   height: fit-content;
   font-size: small;
@@ -153,7 +165,7 @@
 }
 
 #event-input {
-  width: fit-content;
+  width: 50%;
   padding: 0.5rem;
   border: 2px solid mediumpurple;
   border-radius: 0.25rem;
@@ -165,7 +177,7 @@
 {
   display: flex;
   justify-content: space-between;
-  margin: 30px 30px;
+  margin: 20px 20px;
 }
 #E-Header
 {

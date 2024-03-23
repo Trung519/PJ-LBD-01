@@ -11,7 +11,7 @@ export default function VerifyButton({ allVerified}) {
     }
     if (allVerified) {
         return (
-            <button id="active" onClick={handleVerify} type="submit">Verify</button>
+            <button id="activeAll" onClick={handleVerify} type="submit">Verify</button>
         )
     }
     return (

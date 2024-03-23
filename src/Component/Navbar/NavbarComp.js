@@ -20,7 +20,6 @@ import Logo_HCMUT from '../assets/logo_HCMUT.png';
 
 function Func_NavbarComp() {
   const [stateLogin, setStateLogin] = useState(true);
-  const [username, setusername] = useState("")
   const user = JSON.parse(localStorage.getItem('user'));
   useEffect(() => {
     if (localStorage.getItem('user')) {
