@@ -11,7 +11,7 @@ export const events01 = [
         lead: 'Jane Smith',
         time: '2024-03-22 15:00',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
     {
         name: 'Event 3',
@@ -32,7 +32,7 @@ export const events01 = [
         lead: 'David Wilson',
         time: '2024-04-20 11:00',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
     {
         name: 'Event 6',
@@ -53,7 +53,7 @@ export const events01 = [
         lead: 'Olivia Rodriguez',
         time: '2024-05-08 09:00',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
     {
         name: 'Event 9',
@@ -75,7 +75,7 @@ export const events02 =[
         lead: 'Matthew Turner',
         time: '2024-05-26 08:45',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
     {
         name: 'Event 12',
@@ -96,7 +96,7 @@ export const events02 =[
         lead: 'Emma Green',
         time: '2024-06-13 11:45',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
     {
         name: 'Event 15',
@@ -117,7 +117,7 @@ export const events02 =[
         lead: 'James Hill',
         time: '2024-07-01 14:00',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
     {
         name: 'Event 18',
@@ -138,6 +138,6 @@ export const events02 =[
         lead: 'Ella Robinson',
         time: '2024-07-19 13:30',
         budgetState: 'Pending',
-        status: 'Planning'
+        status: 'Finished'
     },
 ];

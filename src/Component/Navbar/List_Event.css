@@ -45,20 +45,24 @@ tbody {
 }
 
 #text-funded {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     border-radius: 5px;
     cursor: none;
-    background-color: rgb(81, 81, 224);
-    color: #dddddd;
+    background-color: #ADE8F4;
+    color: 	blue;
     width: 50%;
     height: 50%;
     border: none;
 }
 
 #text-pendding {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
     border-radius: 5px;
-    cursor: none;
-    background-color: rgb(234, 250, 4);
-    color: #000000c9;
+    cursor:none;
+    background-color:#fffcad;
+    color: 	#fda63a;
     width: 50%;
     height: 50%;
     border: none;
@@ -89,4 +93,10 @@ tbody {
     border-radius: 8px;
     font-size: 16px;
     color: #495057;
+}
+
+#status {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+   
 }
