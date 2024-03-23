@@ -10,14 +10,13 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 export default class Footer extends Component {
   render() {
     return (
-      <footer className='footer'>
+      <div className='footer'>
         <div className='container'>
           <div className='row'>
             <div className='footer-col'>
               <h2>Đoàn hội CSE</h2>
               <ul>
                 <li>
-                  <img src={Logo_CSE} id='logo_CSE'></img>
                 </li>
                 <li></li>
               </ul>
@@ -38,7 +37,7 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     )
   }
 }

@@ -73,32 +73,34 @@ function Func_Login() {
         }
     }
     return (
-        <div id='loginjs'>
-            <form id='formlogin' onSubmit={(e) => handleSubmit(e)}>
-                <fieldset>
-                    <div>
-                        <h1 id='header' onClick={(event) => { event.preventDefault(); setaction("Sign up") }}><b>{action}</b></h1>
-                    </div>
-                    {action === "Sign up" ? <div>
-                        <input type='text' name='username' placeholder=' Enter Yourname'></input>
-                        <input type='number' name='userphone' placeholder=' Enter Your Phonecall'></input>
-                    </div> : <div></div>}
-                    <div>
-                        <input type='text' placeholder=' Enter UserID' name='userid' id='placeholder_user' onChange={(e) => { setuserId(e.target.value) }}></input>
-                    </div>
-                    <div>
-                        <input type='password' placeholder=' Enter Password' name='pw' onChange={(e) => { setpassword(e.target.value) }}></input>
-                    </div>
-                    <div>
+        <>
+            <div id='loginjs' style={{ backgroundImage: `url(${bg_lg})`}}>
+                <form id='formlogin' onSubmit={(e) => handleSubmit(e)}>
+                    <fieldset>
+                        <div>
+                            <h1 id='header'><b>{action}</b></h1>
+                        </div>
+                        {action === "Sign up" ? <div>
+                            <input type='text' name='username' placeholder=' Enter Yourname'></input>
+                            <input type='number' name='userphone' placeholder=' Enter Your Phonecall'></input>
+                        </div> : <div></div>}
+                        <div>
+                            <input type='text' placeholder=' Enter UserID' name='userid' id='placeholder_user' onChange={(e) => { setuserId(e.target.value) }}></input>
+                        </div>
+                        <div>
+                            <input type='password' placeholder=' Enter Password' name='pw' onChange={(e) => { setpassword(e.target.value) }}></input>
+                        </div>
+                        <div>
 
-                    </div>
-                    <div className='submit-container'>
-                        {action === "Login" ? <button className='submit' >Login</button> : <div></div>}
-                        <button className='submit' onClick={() => { setaction("Sign up") }}>Sign up</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
+                        </div>
+                        <div className='submit-container'>
+                            {action === "Login" ? <button className='submit' >Login</button> : <div></div>}
+                            <button className='submit' onClick={() => { setaction("Sign up") }}>Sign up</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </>
     )
 }
 export default function Login() {
