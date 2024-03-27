@@ -54,7 +54,7 @@ function Func_NavbarComp() {
                   <Nav.Link id='navtab' as={Link} to="/List_Event">Danh sách sự kiện</Nav.Link>
                 </div>
                 {stateLogin ? (
-                  <Nav.Link title='button' id='buttonlogin' as={Link} to={"./Login"} onDoubleClick={() => { window.location.reload() }}>Login</Nav.Link>
+                  <Nav.Link title='button' id='buttonlogin' as={Link} to={"./Login"} onDoubleClick={() => { window.location.reload() }}>Đăng nhập</Nav.Link>
                 ) : (
                   <>
                     <NavDropdown id='navtab' title={user.map((data) => data.username)}>

@@ -33,7 +33,7 @@ export default function UserInput({ userInput, onChange, onSubmit }) {
                         onChange={onChange} />
                 </p>
                 <div className="container-vertifyall">
-                    <button className="btn-sb-user-input" onClick={onSubmit}>Submit</button>
+                    <button className="btn" onClick={onSubmit}>Submit</button>
                 </div>
             </div>
         </form>

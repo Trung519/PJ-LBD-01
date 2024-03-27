@@ -11,14 +11,14 @@ export default function VerifyButton({ allVerified}) {
     }
     if (allVerified) {
         return (
-            <button id="activeAll" onClick={handleVerify} type="submit">Verify</button>
+            <button id="activeAll" onClick={handleVerify} type="submit">Đã duyệt</button>
         )
     }
     return (
         isVerified ?
-            <button id='active' onClick={handleVerify}>OK</button>
+            <button id='active' onClick={handleVerify}>Đã duyệt</button>
             :
-            <button id='inactive' onClick={handleVerify}>NOT OK</button>
+            <button id='inactive' onClick={handleVerify}>Chưa duyệt</button>
             
         )
 };  

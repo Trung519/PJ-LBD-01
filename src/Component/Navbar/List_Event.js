@@ -30,7 +30,7 @@ export default function List_Event({  }) {
     <table id="List_Table">
       <thead>
         <tr id='row-title'>
-          <th id='col-stt'>STT</th>
+          <th className='col-stt'>STT</th>
           <th>Tên sự kiện</th>
           <th>Người phụ trách</th>
           <th>Thời gian diễn ra</th>
@@ -41,7 +41,7 @@ export default function List_Event({  }) {
       <tbody id='table'>
         {events.map((event, index) => (
           <tr key={index}>
-            <td id='col-stt'>{index + 1}</td>
+            <td className='col-stt'>{index + 1}</td>
             <td>{event.name}</td>
             <td>{event.lead}</td>
             <td>{event.time}</td>

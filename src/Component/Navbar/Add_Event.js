@@ -7,8 +7,8 @@ function Add_Event() {
 
   const [userInput, setUserInput] = useState({
     productName: '',
-    productQuantity: 0,
-    productPrice: 0
+    productQuantity: '',
+    productPrice: ''
   });
 
   const [tableData, setTableData] = useState([]);

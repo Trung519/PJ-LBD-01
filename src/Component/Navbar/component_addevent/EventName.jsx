@@ -1,24 +1,24 @@
 import { useState } from "react"
-import Input from "./Input,";
+import Input from "./Input";
 export default function EventName() {
     const [Header, setHeader] = useState("");
     return (
         <>
-            <h1 id="E-Header">{!Header ? "------------" : Header}</h1>
+            <h1 id="E-Header">{!Header ? "Event Name" : Header}</h1>
             <div id="E-name">
                 <div>
-                    <Input label="Tên sự kiện: " id="event-input" type="text" onChange={(e) => { setHeader(e.target.value) }}></Input>
+                    <Input label="Tên sự kiện: " className="event-input" type="text" onChange={(e) => { setHeader(e.target.value) }}></Input>
                 </div>
 
                 <div>
-                    <Input label="Người phụ trách:  " id="event-input" type="text" ></Input>
+                    <Input label="Người phụ trách:  " className="event-input" type="text" ></Input>
                 </div>
                 <div>
-                    <Input label="Thời gian diễn ra:   " id="event-input" type="date" ></Input>
+                    <Input label="Thời gian diễn ra:   " className="event-input" type="date" ></Input>
                 </div>
-                <div>
-                    <button id="btn-save">Save</button>
-                </div>
+            </div>
+            <div className="container-button">
+                <button className="btn" id="btn-save">Save</button>
             </div>
         </>
     )

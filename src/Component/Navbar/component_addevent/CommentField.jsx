@@ -19,7 +19,7 @@ export default function CommentField({comment, onChangeComment}) {
     return (
         <>
            {editableComment}
-            <FontAwesomeIcon icon={faComment} onClick={handleClick}/>
+            <FontAwesomeIcon id="comment-icon" icon={faComment} onClick={handleClick}/>
         </>
         
     )
