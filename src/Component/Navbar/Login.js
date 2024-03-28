@@ -17,7 +17,7 @@ function Func_Login() {
     useEffect(() => {
         setdata(JSON.parse(localStorage.getItem('user')));
     }, [])
-    const nav = useNavigate();
+    // const nav = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("name");
@@ -33,7 +33,7 @@ function Func_Login() {
                         }
                         else {
                             if (i.pw == e.target.pw.value)
-                                nav("/Home")
+                                <Home />
                             else alert("Mật khẩu không đúng");
                         }
                         break;

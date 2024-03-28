@@ -8,8 +8,8 @@ import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
 
 function Func_Home() {
-  const data = useLocation();
-  const nav = useNavigate();
+  // const data = useLocation();
+  // const nav = useNavigate();
   return (
     <>
       <Slide>
