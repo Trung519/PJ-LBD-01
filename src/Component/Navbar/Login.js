@@ -74,31 +74,45 @@ function Func_Login() {
     }
     return (
         <>
-            <div id='loginjs' style={{ backgroundImage: `url(${bg_lg})`}}>
-                <form id='formlogin' onSubmit={(e) => handleSubmit(e)}>
-                    <fieldset>
-                        <div>
-                            <h1 id='header'><b>{action}</b></h1>
-                        </div>
-                        {action === "Đăng ký" ? <div>
-                            <input type='text' name='username' placeholder='Họ và tên'></input>
-                            <input type='number' name='userphone' placeholder=' Số điện thoại'></input>
-                        </div> : <div></div>}
-                        <div>
-                            <input type='text' placeholder=' Tên đăng nhập' name='userid' id='placeholder_user' onChange={(e) => { setuserId(e.target.value) }}></input>
-                        </div>
-                        <div>
-                            <input type='password' placeholder=' Mật khẩu' name='pw' onChange={(e) => { setpassword(e.target.value) }}></input>
-                        </div>
-                        <div>
+            <div id='loginjs' style={{ backgroundImage: `url(${bg_lg})`, width: '100%', height: '500px', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '100%'
+                }}>
+                    <form id='formlogin' onSubmit={(e) => handleSubmit(e)}>
+                        <fieldset>
+                            <div>
+                                <h1 id='header'><b>{action}</b></h1>
+                            </div>
+                            {action === "Đăng ký" ? <div>
+                                <input type='text' name='username' placeholder='Họ và tên'></input>
+                                <input type='number' name='userphone' placeholder=' Số điện thoại'></input>
+                            </div> : <div></div>}
+                            <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                                <div>
+                                    <input type='text' placeholder=' Tên đăng nhập' name='userid' id='placeholder_user' onChange={(e) => { setuserId(e.target.value) }}></input>
+                                </div>
+                                <div>
+                                    <input type='password' placeholder=' Mật khẩu' name='pw' onChange={(e) => { setpassword(e.target.value) }}></input>
+                                </div>
+                            </div>
+                            <div>
 
-                        </div>
-                        <div className='submit-container'>
-                            {action === "Đăng nhập" ? <button className='submit' >Đăng nhập</button> : <div></div>}
-                            <button className='submit' onClick={() => { setaction("Đăng ký") }}>Đăng ký</button>
-                        </div>
-                    </fieldset>
-                </form>
+                            </div>
+                            <div className='submit-container'>
+                                {action === "Đăng nhập" ? <button className='submit' >Đăng nhập</button> : <div></div>}
+                                <button className='submit' onClick={() => { setaction("Đăng ký") }}>Đăng ký</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </>
     )
