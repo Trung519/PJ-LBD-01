@@ -1,0 +1,60 @@
+body
+{
+  line-height: 1.5;
+  font-family:sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container
+{
+  max-width: 1170px;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+.row
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer
+{
+  /* margin-top: 200px; */
+  padding: 70px 0px;
+  background: #8197e6;
+}
+.footer-col
+{
+  max-width: 33.33%;
+  padding: 0px 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.footer-col h2{
+  font-weight: bold;
+  color: #fff;
+  left: 0px;
+  font-size: 18px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.532);
+  line-height: 2;
+  width: 50%;
+}
+.footer-col ul li{
+  font-size: 16px;
+  display: block;
+  color:#e8f0f4;
+  line-height: 2;
+}
+#logo_CSE
+{
+  max-width: 30%;
+}
+#icon
+{
+  color: #005eff;
+  font-size: large;
+}
