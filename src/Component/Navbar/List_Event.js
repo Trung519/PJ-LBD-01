@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './List_Event.css';
 import { events01,events02 } from './Data_E_List';
-export default function List_Event({  }) { 
+export default function List_Event() { 
   const handlebudghetState = (event)=>{
     switch(event) {
       case 'Funded': return <button id='text-funded'>Đã giải ngân</button>;

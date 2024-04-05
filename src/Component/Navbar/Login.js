@@ -1,10 +1,8 @@
-import React, { Component, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './Login.css';
 import Home from './Home';
-import bg_lg from '../assets/bg-login.jpg';
-import { json, useNavigate } from 'react-router-dom';
-function Func_Login() {
+function FuncLogin() {
     const [action, setaction] = useState('Đăng nhập');
     const [userId, setuserId] = useState('');
     const [password, setpassword] = useState('')
@@ -17,22 +15,28 @@ function Func_Login() {
     useEffect(() => {
         setdata(JSON.parse(localStorage.getItem('user')));
     }, [])
-    // const nav = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("name");
-        if (e.target.userid.value && e.target.pw.value) {
+        if (action === "Đăng ký" && (!e.target.username.value || !e.target.userphone.value)) {
+            setaction("Đăng ký");
+        }
+        else if (e.target.userid.value && e.target.pw.value) {
             let existingUser = false;
             if (localStorage.getItem('user')) {
                 for (let i of data) {
-                    if (i.userid === e.target.userid.value) {
+                    if (i.userid === e.target.userid.value && i.pw === e.target.pw.value && action === "Đăng nhập") {
+                    console.log("Đăng nhập thành công");
+                    window.location.reload();
                         existingUser = true;
-                        if (action !== "Đăng nhập") {
-                            alert("Tên đăng nhập đã tồn tại! Hãy chọn một tên khác hoặc đăng nhập");
+                        break;}
+                    else if (i.userid === e.target.userid.value) {
+                        existingUser = true;
+                        if (action === "Đăng ký") {
+                            alert("Tên đăng nhập đã tồn tại! Hãy chọn một tên khác hoặc đăng nhập!");
                             setaction("Đăng nhập");
                         }
                         else {
-                            if (i.pw == e.target.pw.value)
+                            if (i.pw === e.target.pw.value)
                                 <Home />
                             else alert("Mật khẩu không đúng");
                         }
@@ -66,7 +70,7 @@ function Func_Login() {
                         setdata([localStorage.getItem('user')]);
                     }
 
-                    setaction("Đăng nhập");
+                    // setaction("Đăng nhập");
                     window.location.reload();
                 }
             }
@@ -74,13 +78,8 @@ function Func_Login() {
     }
     return (
         <>
-            <div id='loginjs' style={{ backgroundImage: `url(${bg_lg})`, width: '100%', height: '500px', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '100%'
-                }}>
+        <div className="loginbg">
+            <div id='loginjs'>
                     <form id='formlogin' onSubmit={(e) => handleSubmit(e)}>
                         <fieldset>
                             <div>
@@ -90,19 +89,13 @@ function Func_Login() {
                                 <input type='text' name='username' placeholder='Họ và tên'></input>
                                 <input type='number' name='userphone' placeholder=' Số điện thoại'></input>
                             </div> : <div></div>}
-                            <div style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}>
+
                                 <div>
                                     <input type='text' placeholder=' Tên đăng nhập' name='userid' id='placeholder_user' onChange={(e) => { setuserId(e.target.value) }}></input>
                                 </div>
                                 <div>
                                     <input type='password' placeholder=' Mật khẩu' name='pw' onChange={(e) => { setpassword(e.target.value) }}></input>
                                 </div>
-                            </div>
                             <div>
 
                             </div>
@@ -110,16 +103,19 @@ function Func_Login() {
                                 {action === "Đăng nhập" ? <button className='submit' >Đăng nhập</button> : <div></div>}
                                 <button className='submit' onClick={() => { setaction("Đăng ký") }}>Đăng ký</button>
                             </div>
+                            {action === "Đăng ký" ? <span >Đã có tài khoản? <span className="loginp" onClick={ () => {setaction("Đăng nhập")}}>Đăng nhập</span> </span> : ""}
+
                         </fieldset>
                     </form>
-                </div>
+      
+            </div>
             </div>
         </>
     )
 }
 export default function Login() {
     return (
-        <Func_Login />
+        <FuncLogin />
     )
 }
 

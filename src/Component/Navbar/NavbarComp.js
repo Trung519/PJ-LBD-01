@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -39,9 +39,9 @@ function Func_NavbarComp() {
           <Container>
             <Navbar.Brand href="#">
               <div id='img_container'>
-                <img src={Logo_Doan} id='img_logoD'></img>
-                <img src={Logo_HCMUT} id='img_logoH'></img>
-                <img src={Logo_HoiSv} id='img_logoHsv'></img>
+                <img src={Logo_Doan} id='img_logoD' alt="Logo Đoàn"></img>
+                <img src={Logo_HCMUT} id='img_logoH' alt="Logo HCMUT"></img>
+                <img src={Logo_HoiSv} id='img_logoHsv' alt="Logo Hội"></img>
               </div>
               CSE
             </Navbar.Brand>

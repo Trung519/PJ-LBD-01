@@ -11,8 +11,6 @@ export default function UserInput({ userInput, onChange, onSubmit }) {
                         name="productName"
                         value={userInput.productName}
                         onChange={onChange}
-
-
                     />
 
                 </p>

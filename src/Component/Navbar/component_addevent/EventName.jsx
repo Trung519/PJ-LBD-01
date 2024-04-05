@@ -4,7 +4,7 @@ export default function EventName() {
     const [Header, setHeader] = useState("");
     return (
         <>
-            <h1 id="E-Header">{!Header ? "Event Name" : Header}</h1>
+            <h1 id="E-Header">{!Header ? "Tên sự kiện" : Header}</h1>
             <div id="E-name">
                 <div>
                     <Input label="Tên sự kiện: " className="event-input" type="text" onChange={(e) => { setHeader(e.target.value) }}></Input>
