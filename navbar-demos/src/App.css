@@ -1,0 +1,82 @@
+.bg-body-tertiary
+{
+  height: 70px;
+  margin: 0;
+  padding-left: 0;
+
+}
+#img_container {
+  display: flex;
+  justify-content: center;
+  
+}
+#img_container img
+{
+  max-width: 2.5%;
+  position: absolute;
+  left: 10px;
+  bottom: 17px;
+}
+
+#img_logoHsv
+{
+  margin-left: 100px;
+}
+#img_logoH
+{
+  margin-left: 50px;
+}
+
+.me-auto
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#navtab
+{
+  font-weight: bold;
+}
+
+#buttonlogin
+{
+  border: none;
+  border-radius: 5px;
+  width: 5%;
+  height: auto;
+  text-align: center;
+  font-size:medium;
+}
+#buttonlogin 
+{
+  background-color: none;
+  width: fit-content;
+  height: fit-content;
+}
+#buttonlogin:hover { 
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); 
+}
+#btn-logout
+{
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+#btn-logout :hover
+{
+  background-color: aquamarine;
+  color: blueviolet;
+}
+#backgroundimage
+{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100vh;
+}
+#basic-navbar-nav
+{
+  display: flex;
+  justify-content: space-between;
+}
+
