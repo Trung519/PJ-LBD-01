@@ -1,8 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import Logo_CSE from '../assets/logocse.png'
 import React, { Component } from 'react'
 import './footer.css'
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import {faLocationDot } from '@fortawesome/free-solid-svg-icons'

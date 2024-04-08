@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './List_Event.css';
+<<<<<<< HEAD
 import { events01, events02 } from './Data_E_List';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import Table from '@mui/material/Table';
@@ -17,6 +18,14 @@ export default function List_Event({ }) {
         return <button id='text-funded'>Đã giải ngân</button>;
       case 'Pending':
         return <button id='text-pendding'>Đang chờ</button>;
+=======
+import { events01,events02 } from './Data_E_List';
+export default function List_Event() { 
+  const handlebudghetState = (event)=>{
+    switch(event) {
+      case 'Funded': return <button id='text-funded'>Đã giải ngân</button>;
+      case 'Pending': return <button id='text-pendding'>Đang chờ</button>;
+>>>>>>> 32c22887932887f1301c26b4828f8d1c0e6ad76e
       default:
         return <div className='budget-default'>Unknown</div>;
     }

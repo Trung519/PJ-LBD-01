@@ -46,9 +46,9 @@ class NavigationBar extends Component {
             <>
                 <nav>
                     <div id='logo-container'>
-                        <img src={Logo_Doan} id='logoDoan'></img>
-                        <img src={Logo_HCMUT} id='logoBK'></img>
-                        <img src={Logo_HoiSv} id='logoHoi'></img>
+                        <img src={Logo_Doan} id='logoDoan' alt="Logo Đoàn"></img>
+                        <img src={Logo_HCMUT} id='logoBK' alt="Logo HCMUT"></img>
+                        <img src={Logo_HoiSv} id='logoHoi' alt="Logo Hội"></img>
                         <span id="cse-brand">CSE</span>
                     </div>
                     <div>
