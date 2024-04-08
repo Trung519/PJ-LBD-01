@@ -105,3 +105,8 @@ tbody {
     text-align: right;
     width: 5%;
 }
+#DialogRow {
+    width:fit-content;
+    height:fit-content;
+    align-items: center;
+}
