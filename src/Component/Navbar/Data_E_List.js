@@ -140,4 +140,95 @@ export const events02 =[
         budgetState: 'Pending',
         status: 'Đã hoàn thành'
     },
+    {
+        name: 'Event 3',
+        lead: 'Alice Johnson',
+        time: '2024-04-05 09:15',
+        budgetState: 'Funded',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 4',
+        lead: 'Bob Brown',
+        time: '2024-04-10 11:45',
+        budgetState: 'Approved',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 5',
+        lead: 'Emily Davis',
+        time: '2024-04-18 16:00',
+        budgetState: 'Funded',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 6',
+        lead: 'Michael Wilson',
+        time: '2024-04-20 13:30',
+        budgetState: 'Pending',
+        status: 'Chưa xác nhận'
+    },
+    {
+        name: 'Event 7',
+        lead: 'Olivia Garcia',
+        time: '2024-04-25 10:45',
+        budgetState: 'Funded',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 8',
+        lead: 'Sophia Martinez',
+        time: '2024-05-02 08:00',
+        budgetState: 'Approved',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 9',
+        lead: 'James Lee',
+        time: '2024-05-09 15:20',
+        budgetState: 'Pending',
+        status: 'Chưa xác nhận'
+    },
+    {
+        name: 'Event 10',
+        lead: 'Isabella Rodriguez',
+        time: '2024-05-15 09:45',
+        budgetState: 'Funded',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 11',
+        lead: 'Liam Wilson',
+        time: '2024-05-20 12:30',
+        budgetState: 'Approved',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 12',
+        lead: 'Charlotte Thompson',
+        time: '2024-05-25 14:00',
+        budgetState: 'Pending',
+        status: 'Chưa xác nhận'
+    },
+    {
+        name: 'Event 13',
+        lead: 'Ethan Clark',
+        time: '2024-06-02 11:15',
+        budgetState: 'Funded',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 14',
+        lead: 'Ava Lewis',
+        time: '2024-06-10 10:30',
+        budgetState: 'Funded',
+        status: 'Đã lên lịch'
+    },
+    {
+        name: 'Event 15',
+        lead: 'Mia Hernandez',
+        time: '2024-06-18 09:00',
+        budgetState: 'Approved',
+        status: 'Đã lên lịch'
+    }
 ];
