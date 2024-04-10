@@ -44,6 +44,8 @@ export default function List_Event({ }) {
   const [callAll, setcallAll] = React.useState(0);
   const [color, setColor] = React.useState('#4e79a7');
   const [all_money, setall_money] = useState(dataD.map(index => index.all))
+  const [showchart, setshowchart] = useState(false)
+
   const chartsParams = {
     margin: { bottom: 20, left: 80, right: 50 },
     height: 300,
@@ -84,6 +86,10 @@ export default function List_Event({ }) {
     setdnum(Number(e));
     setcallAll(dnum * dprice);
     all_money[index] = dnum * dprice;
+    const updatedAllMoney = [...all_money];
+    updatedAllMoney[index] = dnum * dprice;
+    setall_money(updatedAllMoney);
+    console.log("asdasd",all_money, typeof(all_money),"babehello",updatedAllMoney,"upupupupupup",all_money[index])
   }
   return (
     <>
@@ -246,25 +252,28 @@ export default function List_Event({ }) {
             </div>
           </div >
           {/*-------------------------------------------------------------------- */}
-          <Stack direction="column" spacing={2} alignItems="center" sx={{ width: '100%' }}>
-            <LineChart
-              {...chartsParams}
-              series={[
-                {
-                  data: all_money,
-                  label: 'Bảng 1',
-                  color,
-                },
-                {
-                  data: [770000, 880000, 550000, 450000, 600000, 220000, 300000, 900000,
-                    770000, 880000, 550000, 450000, 600000, 220000, 300000, 900000,
-                    770000, 880000, 550000, 450000],
-                  label: 'Bảng 2',
-                  color: 'red',
-                }
-              ]}
-            />
-          </Stack>
+          <Button onClick={() => setshowchart(!showchart)}>Showchart</Button>
+          {showchart &&
+            <Stack direction="column" spacing={2} alignItems="center" sx={{ width: '100%' }}>
+              <LineChart
+                {...chartsParams}
+                series={[
+                  {
+                    data: all_money,
+                    label: 'Bảng 1',
+                    color,
+                  },
+                  {
+                    data: [770000, 880000, 550000, 450000, 600000, 220000, 300000, 900000,
+                      770000, 880000, 550000, 450000, 600000, 220000, 300000, 900000,
+                      770000, 880000, 550000, 450000],
+                    label: 'Bảng 2',
+                    color: 'red',
+                  }
+                ]}
+              />
+            </Stack>
+          }
         </Dialog>
       </div>
     </>
