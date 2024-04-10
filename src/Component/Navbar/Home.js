@@ -4,6 +4,7 @@ import imagedh from '../assets/Image_DH.jpeg'
 import k22 from '../assets/k22.jpeg'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
+import Footer from '../footer/footer'
 
 function FuncHome() {
   // const data = useLocation();
@@ -30,6 +31,8 @@ function FuncHome() {
 }
 export default function Home() {
   return (
+    <>
     <FuncHome />
+    </>
   )
 } 

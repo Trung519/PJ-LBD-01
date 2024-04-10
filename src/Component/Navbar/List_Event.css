@@ -1,107 +1,79 @@
-/* List_Event.css */
-#List_Table {
-    display: table;
-    justify-content: space-between;
-    width: 95%;
-    border-collapse: collapse;
-    font-size: 0.9em;
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
     font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin: auto;
+
 }
-
-/* #List_Table thead,
-tbody {
-    text-align: left;
-} */
-
-#List_Table thead tr {
-  background-color: #36304a;
-    color: #ffffff;
-}
-
-#List_Table th,
-#List_Table td {
-    padding: 12px 15px;
-    max-width: 200px;
-    word-wrap: break-word;
-}
-
-#List_Table tbody tr {
-    border-bottom: 1px solid #052814;
-}
-
-#List_Table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-#List_Table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-
-#List_Table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-}
-
-#text-funded {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: not-allowed;
-    background-color: #ADE8F4;
-    color: 	blue;
-    width: 50%;
-    height: 50%;
+.budget-default{
+    background-color: #ebc474;
+    padding: 0.4rem 0;
+    border-radius: 2rem;
     border: none;
+    width: 7rem;
+    text-align: center;
+}
+.body_listname {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem ;
 }
 
-#text-pendding {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    border-radius: 5px;
-    cursor: not-allowed;
-    background-color:#fffcad;
-    color: 	#fda63a;
-    width: 50%;
-    height: 50%;
-    border: none;
+#PaperTable {
+    width: 90vw;
+    height: auto;
+    background-color: #fff5;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+
+    overflow: hidden;
 }
 
 #header-list {
+    width: 100%;
+    height: 10%;
+    background-color: #0909092a;
+    padding: 0.8rem 1rem;
     text-align: center;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    color:  #36304a
-}
-.tool-bar
-{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 40px;
-    
-}
-.tool-bar label{
-    font-size: larger;
-    margin-right: 20px;
-    color: #36304a;
-}
-.tool-bar input[type='month'] {
-    padding: 3px;
-    border: 3px solid #ced4da;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #495057;
+    border: none;
+    border-radius: 1.5rem;
+    font-family: sans-serif;
 }
 
-#status {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-   
+#table tr:nth-child(even) {
+    background-color: #0000000b;
 }
+#table tr:hover {
+    background-color: rgba(176, 220, 246, 0.47);
+}
+#text-pendding {
+    background-color: #f8c2cc;
+    color: #ff0230fc;
+    padding: 0.4rem 0;
+    border-radius: 2rem;
+    border: none;
+    width: 7rem;
+}
+#text-funded {
+    background-color: #86e49d;
+    color: #006b21;
+    padding: 0.4rem 0;
+    border-radius: 2rem;
+    border: none;
+    width: 7rem;
+}
+@media (max-width:1000px) {
+    td:not(:first-of-type){
+        min-width: 12.1rem;
 
-.col-stt {
-    text-align: right;
-    width: 5%;
+    }
+}
+.close-btn {
+    display: flex;
+    justify-content: flex-end;
 }
