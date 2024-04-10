@@ -20,7 +20,7 @@ export default function UserInput({ userInput, onChange, onSubmit }) {
                         required
                         name="productPrice"
                         value={userInput.productPrice} onChange={onChange}
-                    />
+                    />       
                 </p>
                 <p>
                     <label>Số lượng</label>
