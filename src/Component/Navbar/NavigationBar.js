@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Add_Event from './Add_Event';
-import Home from './Home';
+import NewHome from './NewHome';
 import List_Event from './List_Event';
 import Login from './Login';
 import './NavigationBar.css';
@@ -28,7 +28,7 @@ class NavigationBar extends Component {
 
         switch (this.state.currentPage) {
             case 'home':
-                navbarComponent = <Home />;
+                navbarComponent = <NewHome />;
                 break;
             case 'add_event':
                 navbarComponent = <Add_Event />;
@@ -51,15 +51,17 @@ class NavigationBar extends Component {
                         <img src={Logo_HoiSv} id='logoHoi' alt="Logo Hội"></img>
                         <span id="cse-brand">CSE</span>
                     </div>
-                    <div>
+                    <div id="navbar-wrapper">
                         <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"}>
-                            <li><button className="nav-btn" onClick={() => this.handlePageChange('home')}  >Trang chủ</button></li>
+                            <li><button className="nav-btn" onClick={() => this.handlePageChange('home')} >Trang chủ</button></li>
                             <li><button className="nav-btn" onClick={() => this.handlePageChange('add_event')} >Thêm sự kiện</button></li>
                             <li><button className="nav-btn" onClick={() => this.handlePageChange('list_event')}>Danh sách sự kiện</button></li>
-                            <li><button className="nav-btn" onClick={() => this.handlePageChange('login')}>Đăng nhập</button></li>
-                        </ul>
-                                          
-                    </div>
+                            </ul> 
+                            </div>
+             
+                            <button className="login-btn" onClick={() => this.handlePageChange('login')}>Đăng nhập</button>
+                                  
+                   
 
                     <div id='mobile' onClick={this.handleClick}>
                         <FontAwesomeIcon id="bar"
