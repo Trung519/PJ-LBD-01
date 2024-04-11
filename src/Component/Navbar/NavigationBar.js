@@ -10,6 +10,7 @@ import NewHome from './NewHome';
 import List_Event from './List_Event';
 import Login from './Login';
 import './NavigationBar.css';
+import LoginTemplate from './LoginTemplate';
 
 class NavigationBar extends Component {
     state = { 
@@ -37,7 +38,7 @@ class NavigationBar extends Component {
                 navbarComponent = <List_Event />;
                 break;
             case 'login':
-                navbarComponent = <Login />;
+                navbarComponent = <LoginTemplate />;
                 break;
             default:
                 navbarComponent = 'Page not found 404';
@@ -60,9 +61,6 @@ class NavigationBar extends Component {
                             </div>
              
                             <button className="login-btn" onClick={() => this.handlePageChange('login')}>Đăng nhập</button>
-                                  
-                   
-
                     <div id='mobile' onClick={this.handleClick}>
                         <FontAwesomeIcon id="bar"
                             icon={this.state.clicked ? faTimes : faBars}
